@@ -10,22 +10,30 @@ function factorialArray(num) {
 };
 
 function primeNumbers(num) {
-  var array = factorialArray(num);
+  // var array = factorialArray(num);
+  //
+  // for(var i = 0; i < array.length; ++i) {
+  //   var prime = true;
+  //   for(var j = 0; j < i; ++j) {
+  //     if (array[i] % array[j] === 0) {
+  //       prime = false;
+  //     }
+  //   }
+  //   if (prime) {
+  //     primes.push(array[i])
+  //   }
+  // }
+  //
+  // return primes;
   var primes = [];
 
-  for(var i = 0; i < array.length; ++i) {
-    var prime = true;
-    for(var j = 0; j < i; ++j) {
-      if (array[i] % array[j] === 0) {
-        prime = false;
-      }
-    }
-    if (prime) {
-      primes.push(array[i])
+  for(var i = num; i >= 2; --i) {
+    if (primeCheck(i)) {
+      primes.push(i)
     }
   }
 
-  return primes;
+  return primes.reverse();
 };
 
 function primeNumberOutput(num) {
@@ -39,7 +47,7 @@ function primeCheck(num) {
 
   var root = Math.floor(Math.sqrt(num));
 
-  for(var i=2; i < root; ++i) {
+  for(var i=2; i <= root; ++i) {
     if ( num % i === 0 ) {
       return false;
     }
