@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prime Numbers</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+</head>
+<body>
+  <div class="ui container">
+    <br>
+    <div class="ui segment">
+      <form class="ui form">
+        <div class="field">
+          <label for="number">Find prime numbers up to:</label>
+          <input type="text" id="number">
+        </div>
+
+        <button class="ui button animated" type="submit" tab-index="0">
+          <div class="visible content">Prime It!</div>
+          <div class="hidden content">
+            <i class="right arrow icon"></i>
+          </div>
+        </button>
+      </form>
+    </div>
+
+    <div class="ui basic modal">
+      <h1 class="ui header">Prime Numbers</h1>
+      <div id="results"></div>
+    </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/scripts-jquery.js"></script>
+<script src="semantic/dist/semantic.min.js"></script>
+</html>
