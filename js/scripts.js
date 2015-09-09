@@ -7,15 +7,15 @@ function factorialArray(num) {
     }
   }
   return array;
-}
+};
 
 function primeNumbers(num) {
   var array = factorialArray(num);
   var primes = [];
 
-  for(var i = 0; i < array.length; i++) {
+  for(var i = 0; i < array.length; ++i) {
     var prime = true;
-    for(var j = 0; j < i; j++) {
+    for(var j = 0; j < i; ++j) {
       if (array[i] % array[j] === 0) {
         prime = false;
       }
@@ -26,8 +26,24 @@ function primeNumbers(num) {
   }
 
   return primes;
-}
+};
 
 function primeNumberOutput(num) {
   return primeNumbers(num).join(", ")
 }
+
+function primeCheck(num) {
+  if (num < 2) {
+    return false;
+  };
+
+  var root = Math.floor(Math.sqrt(num));
+
+  for(var i=2; i < root; ++i) {
+    if ( num % i === 0 ) {
+      return false;
+    }
+  };
+
+  return true;
+};

@@ -17,3 +17,15 @@ describe("primeNumbers", function() {
   });
 
 });
+
+describe("primeCheck", function() {
+
+  it("returns true if prime number", function() {
+    expect(primeCheck(5)).to.equal(true)
+  });
+
+  it("returns false if not a prime number", function() {
+    expect(primeCheck(500)).to.equal(false)
+  })
+
+});
